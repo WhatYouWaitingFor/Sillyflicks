@@ -30,6 +30,7 @@ header .menu{
     font-weight: 500;
 }
 
+
 /* css slider */
 
 .slider
@@ -173,6 +174,8 @@ header .menu{
 @media  screen and (max-width: 678px) {
     .thumbnail{
         justify-content: start;
+        display: flex;
+        flex-direction: column;
     }
     .slider .list .item .content h2{
         font-size: 60px;
