@@ -1,80 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
-    font-family: 'poppins';
+
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #010101;
     color: #fff;
 }
+
 header ul {
     display: flex;
     gap: 5rem;
     list-style: none;
-  }
-  
-  header a {
+    padding: 0;
+}
+
+header a {
     display: block;
     color: white;
     text-decoration: none;
-  
     border-radius: 0.2rem;
     padding: 0.5rem 1rem;
-  
     transition: 0.2s ease-in;
     border-bottom: 2px solid crimson;
-  
-    overflow: hidden;
     position: relative;
-  }
-  
-  header a::before {
+    overflow: hidden;
+}
+
+header a::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-  
     width: 100%;
     height: 100%;
     border-radius: 0.1rem;
     z-index: -1;
-  
-    transition: 0.2s ease-in;
+    background: crimson;
     transform: translateX(-101%);
-    background: crimson;
-  }
-  
-  header a:hover::before {
+    transition: 0.2s ease-in;
+}
+
+header a:hover::before {
     transform: translateX(0);
-  }
-  
-  header a:hover {
+}
+
+header a:hover {
     color: white;
-  }
-  
-  header ul li:nth-child(1) a {
+}
+
+header ul li:nth-child(1) a {
     background: crimson;
     color: white;
-  }
-  
-header{
+}
+
+header {
     max-width: 90%;
     margin: auto;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 50px;
-    justify-content: center;
     align-items: center;
     position: relative;
     z-index: 100;
 }
-header .logo{
+
+header .logo {
     font-weight: bold;
     margin-left: 20px;
 }
 
-header .menu{
-    padding: 0;
-    margin: 0;
+header .menu {
     margin-left: 70px;
     list-style: none;
     display: flex;
@@ -83,40 +79,38 @@ header .menu{
     font-weight: 500;
 }
 
-
-/* css slider */
-
-.slider
-{
+/* CSS Slider */
+.slider {
     height: 100vh;
     margin-top: -50px;
     position: relative;
 }
-.slider .list .item{
+
+.slider .list .item {
     position: absolute;
-    inset:0 0 0 0;
+    inset: 0;
     overflow: hidden;
     opacity: 0;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.slider .list .item img{
+.slider .list .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.slider .list .item::after{
+.slider .list .item::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to top,#000 35%, transparent);
+    background-image: linear-gradient(to top, #000 35%, transparent);
 }
 
-.slider .list .item .content{
+.slider .list .item .content {
     position: absolute;
     left: 10%;
     top: 20%;
@@ -125,52 +119,56 @@ header .menu{
     z-index: 1;
 }
 
-.slider .list .item .content p:nth-child(1){
+.slider .list .item .content p:nth-child(1) {
     text-transform: uppercase;
     letter-spacing: 10px;
 }
-.slider .list .item .content h2{
+
+.slider .list .item .content h2 {
     font-size: 100px;
     margin: 0;
     line-height: 100px;
     text-transform: uppercase;
 }
-.slider .list .item.active{
+
+.slider .list .item.active {
     opacity: 1;
     z-index: 10;
 }
 
- @keyframes ShowContent{
-    to{
+@keyframes ShowContent {
+    to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
- }
- 
- .slider .list .item.active p:nth-child(1),
- .slider .list .item.active h2,
- .slider .list .item.active p:nth-child(3){
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
-    animation: ShowContent .5s .7s ease-in-out 1 forwards;
+    animation: ShowContent 0.5s 0.7s ease-in-out 1 forwards;
 }
 
-.slider .list .item.active h2{
+.slider .list .item.active h2 {
     animation-delay: 1s;
 }
-.slider .list .item.active p:nth-child(3){
+
+.slider .list .item.active p:nth-child(3) {
     animation-duration: 1.3s;
 }
 
-.arrows{
+.arrows {
     position: absolute;
     top: 30%;
     right: 50px;
     z-index: 100;
 }
-.arrows button{
+
+.arrows button {
     background-color: #eee5;
     border: none;
     font-family: monospace;
@@ -179,13 +177,15 @@ header .menu{
     border-radius: 5px;
     font-size: x-large;
     color: #fff;
-    transition: .5s;
+    transition: 0.5s;
 }
-.arrows button:hover{
+
+.arrows button:hover {
     color: #000;
     background-color: #fff;
 }
-.thumbnail{
+
+.thumbnail {
     position: absolute;
     bottom: 50px;
     z-index: 11;
@@ -196,48 +196,103 @@ header .menu{
     padding: 0 50px;
     box-sizing: border-box;
     overflow: auto;
-    
 }
-.thumbnail::-webkit-scrollbar{
+
+.thumbnail::-webkit-scrollbar {
     width: 0;
 }
-.thumbnail .item
-{
+
+.thumbnail .item {
     width: 150px;
     height: 220px;
-    filter: brightness(.5);
-    transition: .5s;
+    filter: brightness(0.5);
+    transition: 0.5s;
     flex-shrink: 0;
 }
-.thumbnail .item img{
+
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-.thumbnail .item.active{
+
+.thumbnail .item.active {
     filter: brightness(1.2);
 }
-.thumbnail .item .content{
+
+.thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
     color: rgba(255, 255, 255, 0.75);
     font-weight: 500;
 }
 
-
-
-@media  screen and (max-width: 768px) {
-    .thumbnail{
-       justify-content: start;
-        
-    }
-    .slider .list .item .content h2{
-        font-size: 20px;
-      
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    header ul {
+        gap: 3rem;
     }
 
-    .arrows{
+    .slider .list .item .content h2 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .arrows {
+        top: 20%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 40px 1fr 40px;
+    }
+
+    header ul {
+        gap: 2rem;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .thumbnail .item {
+        width: 120px;
+        height: 180px;
+    }
+
+    .arrows {
+        top: 15%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header ul {
+        gap: 1rem;
+    }
+
+    header .menu {
+        margin-left: 10px;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .thumbnail {
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+
+    .arrows {
         top: 10%;
     }
 }
