@@ -54,3 +54,9 @@ thumbnails.forEach((thumbnail, index) =>{
     })  
 })
 
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+
+document.querySelector('.hamburger').addEventListener('click', toggleMenu);
