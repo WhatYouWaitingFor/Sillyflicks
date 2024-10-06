@@ -244,13 +244,14 @@ header .menu {
     }
 }
 
+/* Media query for phones in portrait mode with max-width of 768px (general mobile phones) */
 @media screen and (max-width: 768px) {
-    header {
-        grid-template-columns: 40px 1fr 40px;
-    }
-
     header ul {
         gap: 2rem;
+    }
+
+    header .menu {
+        margin-left: 20px;
     }
 
     .slider .list .item .content h2 {
@@ -265,9 +266,11 @@ header .menu {
 
     .arrows {
         top: 15%;
+        right: 40px;
     }
 }
 
+/* Media query for phones with max-width of 480px */
 @media screen and (max-width: 480px) {
     header ul {
         gap: 1rem;
@@ -277,9 +280,17 @@ header .menu {
         margin-left: 10px;
     }
 
+    header .logo {
+        font-size: 18px;
+    }
+
     .slider .list .item .content h2 {
-        font-size: 30px;
-        line-height: 30px;
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .slider .list .item .content p:nth-child(1) {
+        letter-spacing: 7px;
     }
 
     .thumbnail {
@@ -293,6 +304,120 @@ header .menu {
     }
 
     .arrows {
-        top: 10%;
+        top: 12%;
+        right: 30px;
+    }
+
+    .arrows button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Media query for smaller mobile phones with max-width of 354px */
+@media screen and (max-width: 354px) {
+    header ul {
+        gap: 0.5rem;
+    }
+
+    header .menu {
+        margin-left: 5px;
+    }
+
+    header .logo {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .slider .list .item .content p:nth-child(1) {
+        letter-spacing: 5px;
+        font-size: 10px;
+    }
+
+    .thumbnail {
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
+    .thumbnail .item {
+        width: 90px;
+        height: 140px;
+    }
+
+    .arrows {
+        top: 8%;
+        right: 20px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+        font-size: large;
+    }
+
+    .slider .list .item .content {
+        left: 5%;
+        top: 15%;
+        width: 300px;
+        max-width: 70%;
+    }
+}
+
+/* Media query for phones with max-width of 320px */
+@media screen and (max-width: 320px) {
+    header ul {
+        gap: 0.3rem;
+    }
+
+    header .menu {
+        margin-left: 5px;
+    }
+
+    header .logo {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .slider .list .item .content p:nth-child(1) {
+        letter-spacing: 3px;
+        font-size: 9px;
+    }
+
+    .thumbnail {
+        justify-content: flex-start;
+        padding: 0 5px;
+    }
+
+    .thumbnail .item {
+        width: 80px;
+        height: 120px;
+    }
+
+    .arrows {
+        top: 5%;
+        right: 15px;
+    }
+
+    .arrows button {
+        width: 25px;
+        height: 25px;
+        font-size: medium;
+    }
+
+    .slider .list .item .content {
+        left: 5%;
+        top: 15%;
+        width: 250px;
+        max-width: 60%;
     }
 }
