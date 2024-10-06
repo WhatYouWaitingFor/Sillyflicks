@@ -225,7 +225,7 @@ header .menu{
 
 
 
-@media  screen and (max-width: 480px) {
+@media  screen and (max-width: 680px) {
     .thumbnail{
        justify-content: start;
         
@@ -234,23 +234,7 @@ header .menu{
         font-size: 20px;
       
     }
-    
-.logo {
-    margin-left: 10px;
-}
 
-    header .menu{
-    padding: 0;
-    margin: 0;
-    margin-left: 55px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1%;
-    font-weight: 500;
-    
-}
-    
     .arrows{
         top: 10%;
     }
