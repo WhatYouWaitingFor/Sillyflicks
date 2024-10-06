@@ -227,7 +227,7 @@ header .menu{
 
 
 
-@media  screen and (max-width: 680px) {
+@media  screen and (max-width: 768px) {
     .thumbnail{
        justify-content: start;
         
