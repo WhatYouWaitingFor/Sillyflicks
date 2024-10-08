@@ -253,6 +253,11 @@ header ul.show {
 /* Responsivness  */
 
 @media only screen and (max-width: 950px) {
+
+  .arrows{
+    top: 10%;
+}
+
   #btn {
     display: block;
     position: absolute;
