@@ -269,7 +269,7 @@ header ul.show {
 
   header ul {
     position: absolute;
-    right: 50px;
+    
     top: 5vh;
    
     width: 300px;
@@ -294,13 +294,6 @@ header ul.show {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  header ul {
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 
 
 
