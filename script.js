@@ -1,3 +1,19 @@
+const btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  document.querySelector("header ul").classList.toggle("show");
+});
+
+const toTop = document.querySelector(".back-top");
+
+window.addEventListener("scroll", () => {
+  if (pageYOffset > 75) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+});
+
+
 let items=document.querySelectorAll('.slider .list .item');
 let next=document.getElementById('next');
 let prev=document.getElementById('prev');
@@ -53,8 +69,3 @@ thumbnails.forEach((thumbnail, index) =>{
         showSlider();
     })  
 })
-
-// Toggle the menu when the hamburger is clicked
-document.querySelector('.hamburger').addEventListener('click', function() {
-    document.querySelector('.menu').classList.toggle('active');
-});
