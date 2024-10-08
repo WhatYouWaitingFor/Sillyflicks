@@ -269,9 +269,9 @@ header ul.show {
 
   header ul {
     position: absolute;
-  
-    top: 15vh;
-    right: 10px;
+    right: 50px;
+    top: 5vh;
+   
     width: 300px;
     min-height: 400px;
     border-radius: 20px;
