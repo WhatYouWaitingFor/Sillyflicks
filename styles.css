@@ -268,8 +268,8 @@ header ul.show {
   
   header ul {
     position: absolute;
-    right: 5vh;
-    top: 15vh;
+    right: 1vh;
+    top: 5vh;
 
     width: 300px;
     min-height: 400px;
