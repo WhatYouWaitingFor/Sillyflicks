@@ -160,6 +160,27 @@ ul {
   animation-duration: 1.3s;
 }
 
+.arrows{
+  position: absolute;
+  top: 30%;
+  right: 50px;
+  z-index: 100;
+}
+.arrows button{
+  background-color: #eee5;
+  border: none;
+  font-family: monospace;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: x-large;
+  color: #fff;
+  transition: .5s;
+}
+.arrows button:hover{
+  color: #000;
+  background-color: #fff;
+}
 
 .thumbnail {
   position: absolute;
